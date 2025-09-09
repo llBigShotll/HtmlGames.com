@@ -1,0 +1,1925 @@
+Drive mad:
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<script src="https://cdn.jsdelivr.net/npm/p5@1.11.5/lib/p5.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/p5@1.11.5/lib/addons/p5.sound.min.js"></script>
+	<script src="mySketch.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+<head>
+  <base href="https://cdn.jsdelivr.net/gh/genizy/dmad-poki@49b5ab6b987f5f3be58f9dae59c92e8fc1aab9b0/">
+  <script>
+  window.assgdd = {
+    "ancestorOrigins": {
+        "0": "https://games.poki.com",
+        "1": "https://poki.com"
+    },
+    "href": "https://f9564e4e-ef25-4e4b-ba67-cb11a1576bbd.poki-gdn.com/cc1bc57a-e355-4696-97c2-097bf6188606/index.html?country=US&url_referrer=https%3A%2F%2Fpoki.com%2F&site_id=3&iso_lang=en&poki_url=https%3A%2F%2Fpoki.com%2Fen%2Fg%2Fdrive-mad&hoist=yes&nonPersonalized=n&cloudsavegames=n&familyFriendly=n&categories=78%2C93%2C96%2C103%2C377%2C390%2C400%2C893%2C929%2C1126%2C1139%2C1140%2C1141%2C1143%2C1147%2C1163%2C1185%2C1190%2C1193%2C1197&special_condition=landing&game_id=f9564e4e-ef25-4e4b-ba67-cb11a1576bbd&game_version_id=cc1bc57a-e355-4696-97c2-097bf6188606&inspector=0",
+    "origin": "https://f9564e4e-ef25-4e4b-ba67-cb11a1576bbd.poki-gdn.com",
+    "protocol": "https:",
+    "host": "f9564e4e-ef25-4e4b-ba67-cb11a1576bbd.poki-gdn.com",
+    "hostname": "f9564e4e-ef25-4e4b-ba67-cb11a1576bbd.poki-gdn.com",
+    "port": "",
+    "pathname": "/cc1bc57a-e355-4696-97c2-097bf6188606/index.html",
+    "search": "?country=US&url_referrer=https%3A%2F%2Fpoki.com%2F&site_id=3&iso_lang=en&poki_url=https%3A%2F%2Fpoki.com%2Fen%2Fg%2Fdrive-mad&hoist=yes&nonPersonalized=n&cloudsavegames=n&familyFriendly=n&categories=78%2C93%2C96%2C103%2C377%2C390%2C400%2C893%2C929%2C1126%2C1139%2C1140%2C1141%2C1143%2C1147%2C1163%2C1185%2C1190%2C1193%2C1197&special_condition=landing&game_id=f9564e4e-ef25-4e4b-ba67-cb11a1576bbd&game_version_id=cc1bc57a-e355-4696-97c2-097bf6188606&inspector=0",
+    "hash": ""
+}
+  </script>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+  <title>Drive Mad</title>
+  <meta name="description" content="">
+  <meta name="google" content="notranslate">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <link rel="stylesheet" href="webapp/fancade.css">
+  <link rel="icon" href="webapp/favicon.ico">
+
+  <!-- POKI SDK -->
+  <script src="poki-sdk.js" ></script>
+</head>
+
+<body id="body">
+
+  <!-- Modal dialog div -->
+  <div id="modal_parent">
+    <div id="modal_content">
+      <span id="modal_close_button">&times;</span>
+      <div id="store_link_modal_content" class="modal_inner"></div>
+      <div id="share_file_modal_content" class="modal_inner"></div>
+    </div>
+  </div>
+
+  <!-- 
+      Game canvas and overlay. Emscripten makes some assumptions about how the canvas is positioned in order
+      to translate document to game coordinates
+    -->
+  <div id="canvas_border" class="emscripten_border">
+    <div id="play_content" class="middle center">
+      <div class="edge">
+        <div class="box">
+          <div class="black">
+            <img src="webapp/cover.jpg" class="cover">
+            <p class="title">Drive Mad</p>
+            <p class="author">Fancade</p>
+          </div>
+        </div>
+      </div>
+      <div id="progress_or_play">
+        <progress id="progress" class="loading" value="0" max="100"></progress>
+      </div>
+      <p class="description"></p>
+    </div>
+    <canvas class="emscripten" id="canvas" tabindex=-1>
+    </canvas>
+    <div id="gradient"></div>
+    <div id="webview_content"></div>
+  </div>
+
+  <!-- Manual JS, Called from WASM -->
+  <script type="text/javascript" src="webapp/source_min.js"></script>
+
+  <!-- Auto generated JS -->
+  <script type="text/javascript" src="webapp/index.js"></script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+Super mario 64:
+
+<html lang="en-us"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Super Mario 64</title>
+    <style>
+      body, html{
+        margin: 0;
+        padding: 0;
+        width: 100vw;
+        min-height: 100vh;
+        font-family: Arial, Helvetica, sans-serif;
+        color: white;
+        image-rendering: pixelated;
+        scrollbar-width: none;
+      }
+      ::-webkit-scrollbar {
+        display: none;
+      }
+      #container {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      canvas {
+        width: 100vw;
+        height: 100vh;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <canvas class="emscripten" id="canvas" width="1920" height="1080" style="cursor: default;"></canvas>
+    </div>
+    <script type="text/javascript">
+      var Module = {
+        preRun: [],
+        postRun: [],
+        print: (function() {
+          return function(text) {
+            if (arguments.length > 1) text = Array.prototype.slice.call(arguments).join(' ');
+            console.log(text);
+          };
+        })(),
+        printErr: function(text) {
+          if (arguments.length > 1)
+            text = Array.prototype.slice.call(arguments).join(' ');
+          console.error(text);
+        },
+        canvas: (function() {
+          var canvas = document.getElementById('canvas');
+          canvas.width = window.innerWidth; // Todo: how to do this from c++
+          canvas.height = window.innerHeight;
+          canvas.addEventListener("webglcontextlost", function(e) {
+            alert('WebGL context lost. You will need to reload the page.');
+            e.preventDefault();
+          }, false);
+          return canvas;
+        })(),
+        setStatus: function(text) {
+        }
+      };
+    </script>
+    <script async="" type="text/javascript" src="https://cdn.jsdelivr.net/gh/ArkShocer/sm64@main/sm64.us.f3dex2e.js"></script>
+    <script>
+    </script>
+  
+
+
+
+
+</body></html>
+
+
+
+
+
+Snow rider:
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/drippy-cat/snowrider3D@c82fe583cbffafa502b0aa3ed2da0053972e0c80/TemplateData/style.css"> <script src="https://cdn.jsdelivr.net/gh/drippy-cat/snowrider3D@c82fe583cbffafa502b0aa3ed2da0053972e0c80/TemplateData/UnityProgress.js"></script> <script src="https://cdn.jsdelivr.net/gh/drippy-cat/snowrider3D@c82fe583cbffafa502b0aa3ed2da0053972e0c80/Build/UnityLoader.js"></script> <script> var gameInstance = UnityLoader.instantiate("gameContainer", "https://cdn.jsdelivr.net/gh/drippy-cat/snowrider3D@c82fe583cbffafa502b0aa3ed2da0053972e0c80/Build/SnowRider3D-gd-1.json", {onProgress: UnityProgress,Module:{onRuntimeInitialized: function() {UnityProgress(gameInstance, "complete")}}}); </script> <div class="webgl-content"> <div id="gameContainer" style="width: 100%; height: 100%; margin: auto"></div> </div>
+
+
+
+
+
+Tetris:
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Basic Tetris HTML Game</title>
+  <meta charset="UTF-8">
+  <style>
+  html, body {
+    height: 100%;
+    margin: 0;
+  }
+
+  body {
+    background: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  canvas {
+    border: 1px solid white;
+  }
+  </style>
+</head>
+<body>
+<canvas width="320" height="640" id="game"></canvas>
+<script>
+// https://tetris.fandom.com/wiki/Tetris_Guideline
+
+// get a random integer between the range of [min,max]
+// @see https://stackoverflow.com/a/1527820/2124254
+function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+// generate a new tetromino sequence
+// @see https://tetris.fandom.com/wiki/Random_Generator
+function generateSequence() {
+  const sequence = ['I', 'J', 'L', 'O', 'S', 'T', 'Z'];
+
+  while (sequence.length) {
+    const rand = getRandomInt(0, sequence.length - 1);
+    const name = sequence.splice(rand, 1)[0];
+    tetrominoSequence.push(name);
+  }
+}
+
+// get the next tetromino in the sequence
+function getNextTetromino() {
+  if (tetrominoSequence.length === 0) {
+    generateSequence();
+  }
+
+  const name = tetrominoSequence.pop();
+  const matrix = tetrominos[name];
+
+  // I and O start centered, all others start in left-middle
+  const col = playfield[0].length / 2 - Math.ceil(matrix[0].length / 2);
+
+  // I starts on row 21 (-1), all others start on row 22 (-2)
+  const row = name === 'I' ? -1 : -2;
+
+  return {
+    name: name,      // name of the piece (L, O, etc.)
+    matrix: matrix,  // the current rotation matrix
+    row: row,        // current row (starts offscreen)
+    col: col         // current col
+  };
+}
+
+// rotate an NxN matrix 90deg
+// @see https://codereview.stackexchange.com/a/186834
+function rotate(matrix) {
+  const N = matrix.length - 1;
+  const result = matrix.map((row, i) =>
+    row.map((val, j) => matrix[N - j][i])
+  );
+
+  return result;
+}
+
+// check to see if the new matrix/row/col is valid
+function isValidMove(matrix, cellRow, cellCol) {
+  for (let row = 0; row < matrix.length; row++) {
+    for (let col = 0; col < matrix[row].length; col++) {
+      if (matrix[row][col] && (
+          // outside the game bounds
+          cellCol + col < 0 ||
+          cellCol + col >= playfield[0].length ||
+          cellRow + row >= playfield.length ||
+          // collides with another piece
+          playfield[cellRow + row][cellCol + col])
+        ) {
+        return false;
+      }
+    }
+  }
+
+  return true;
+}
+
+// place the tetromino on the playfield
+function placeTetromino() {
+  for (let row = 0; row < tetromino.matrix.length; row++) {
+    for (let col = 0; col < tetromino.matrix[row].length; col++) {
+      if (tetromino.matrix[row][col]) {
+
+        // game over if piece has any part offscreen
+        if (tetromino.row + row < 0) {
+          return showGameOver();
+        }
+
+        playfield[tetromino.row + row][tetromino.col + col] = tetromino.name;
+      }
+    }
+  }
+
+  // check for line clears starting from the bottom and working our way up
+  for (let row = playfield.length - 1; row >= 0; ) {
+    if (playfield[row].every(cell => !!cell)) {
+
+      // drop every row above this one
+      for (let r = row; r >= 0; r--) {
+        for (let c = 0; c < playfield[r].length; c++) {
+          playfield[r][c] = playfield[r-1][c];
+        }
+      }
+    }
+    else {
+      row--;
+    }
+  }
+
+  tetromino = getNextTetromino();
+}
+
+// show the game over screen
+function showGameOver() {
+  cancelAnimationFrame(rAF);
+  gameOver = true;
+
+  context.fillStyle = 'black';
+  context.globalAlpha = 0.75;
+  context.fillRect(0, canvas.height / 2 - 30, canvas.width, 60);
+
+  context.globalAlpha = 1;
+  context.fillStyle = 'white';
+  context.font = '36px monospace';
+  context.textAlign = 'center';
+  context.textBaseline = 'middle';
+  context.fillText('GAME OVER!', canvas.width / 2, canvas.height / 2);
+}
+
+const canvas = document.getElementById('game');
+const context = canvas.getContext('2d');
+const grid = 32;
+const tetrominoSequence = [];
+
+// keep track of what is in every cell of the game using a 2d array
+// tetris playfield is 10x20, with a few rows offscreen
+const playfield = [];
+
+// populate the empty state
+for (let row = -2; row < 20; row++) {
+  playfield[row] = [];
+
+  for (let col = 0; col < 10; col++) {
+    playfield[row][col] = 0;
+  }
+}
+
+// how to draw each tetromino
+// @see https://tetris.fandom.com/wiki/SRS
+const tetrominos = {
+  'I': [
+    [0,0,0,0],
+    [1,1,1,1],
+    [0,0,0,0],
+    [0,0,0,0]
+  ],
+  'J': [
+    [1,0,0],
+    [1,1,1],
+    [0,0,0],
+  ],
+  'L': [
+    [0,0,1],
+    [1,1,1],
+    [0,0,0],
+  ],
+  'O': [
+    [1,1],
+    [1,1],
+  ],
+  'S': [
+    [0,1,1],
+    [1,1,0],
+    [0,0,0],
+  ],
+  'Z': [
+    [1,1,0],
+    [0,1,1],
+    [0,0,0],
+  ],
+  'T': [
+    [0,1,0],
+    [1,1,1],
+    [0,0,0],
+  ]
+};
+
+// color of each tetromino
+const colors = {
+  'I': 'cyan',
+  'O': 'yellow',
+  'T': 'purple',
+  'S': 'green',
+  'Z': 'red',
+  'J': 'blue',
+  'L': 'orange'
+};
+
+let count = 0;
+let tetromino = getNextTetromino();
+let rAF = null;  // keep track of the animation frame so we can cancel it
+let gameOver = false;
+
+// game loop
+function loop() {
+  rAF = requestAnimationFrame(loop);
+  context.clearRect(0,0,canvas.width,canvas.height);
+
+  // draw the playfield
+  for (let row = 0; row < 20; row++) {
+    for (let col = 0; col < 10; col++) {
+      if (playfield[row][col]) {
+        const name = playfield[row][col];
+        context.fillStyle = colors[name];
+
+        // drawing 1 px smaller than the grid creates a grid effect
+        context.fillRect(col * grid, row * grid, grid-1, grid-1);
+      }
+    }
+  }
+
+  // draw the active tetromino
+  if (tetromino) {
+
+    // tetromino falls every 35 frames
+    if (++count > 35) {
+      tetromino.row++;
+      count = 0;
+
+      // place piece if it runs into anything
+      if (!isValidMove(tetromino.matrix, tetromino.row, tetromino.col)) {
+        tetromino.row--;
+        placeTetromino();
+      }
+    }
+
+    context.fillStyle = colors[tetromino.name];
+
+    for (let row = 0; row < tetromino.matrix.length; row++) {
+      for (let col = 0; col < tetromino.matrix[row].length; col++) {
+        if (tetromino.matrix[row][col]) {
+
+          // drawing 1 px smaller than the grid creates a grid effect
+          context.fillRect((tetromino.col + col) * grid, (tetromino.row + row) * grid, grid-1, grid-1);
+        }
+      }
+    }
+  }
+}
+
+// listen to keyboard events to move the active tetromino
+document.addEventListener('keydown', function(e) {
+  if (gameOver) return;
+
+  // left and right arrow keys (move)
+  if (e.which === 37 || e.which === 39) {
+    const col = e.which === 37
+      ? tetromino.col - 1
+      : tetromino.col + 1;
+
+    if (isValidMove(tetromino.matrix, tetromino.row, col)) {
+      tetromino.col = col;
+    }
+  }
+
+  // up arrow key (rotate)
+  if (e.which === 38) {
+    const matrix = rotate(tetromino.matrix);
+    if (isValidMove(matrix, tetromino.row, tetromino.col)) {
+      tetromino.matrix = matrix;
+    }
+  }
+
+  // down arrow key (drop)
+  if(e.which === 40) {
+    const row = tetromino.row + 1;
+
+    if (!isValidMove(tetromino.matrix, row, tetromino.col)) {
+      tetromino.row = row - 1;
+
+      placeTetromino();
+      return;
+    }
+
+    tetromino.row = row;
+  }
+});
+
+// start the game
+rAF = requestAnimationFrame(loop);
+</script>
+</body>
+</html>
+
+
+
+
+
+
+Football legends:
+
+<!DOCTYPE html> <html lang="en"> <head> <meta charset="utf-8" /> <meta http-equiv="x-ua-compatible" content="ie=edge"> <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no" /> <link rel="stylesheet" href="https://728591305-836400173629471539.preview.editmysite.com/uploads/b/139890129-766134333972657537/files/assets/css/app.css" type="text/css" /> <title>Football Legends</title> <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> </head> <body> <div id="content"></div> <div id="orientation"></div> <div id="loader">Loading ...</div> <script type="text/javascript" src="https://imasdk.googleapis.com/js/sdkloader/ima3.js"></script> <script type="text/javascript" src="https://728591305-836400173629471539.preview.editmysite.com/uploads/b/139890129-766134333972657537/files/assets/lib/nape.min.js"> var nape ="https://728591305-836400173629471539.preview.editmysite.com/uploads/b/139890129-766134333972657537/files/assets/lib/nape.min.js"; </script> <script type="text/javascript" src="https://728591305-836400173629471539.preview.editmysite.com/uploads/b/139890129-766134333972657537/files/assets/lib/jquery-3.1.1.min.js"></script> <script type="text/javascript" src="https://728591305-836400173629471539.preview.editmysite.com/uploads/b/139890129-766134333972657537/files/assets/lib/easeljs-0.8.2.combined.js"></script> <script type="text/javascript" src="https://728591305-836400173629471539.preview.editmysite.com/uploads/b/139890129-766134333972657537/files/assets/lib/bluebird.min.js"></script> <script type="text/javascript" src="https://728591305-836400173629471539.preview.editmysite.com/uploads/b/139890129-766134333972657537/files/assets/lib/phaser.min.js"></script> <script type="text/javascript" src="https://728591305-836400173629471539.preview.editmysite.com/uploads/b/139890129-766134333972657537/files/assets/lib/phaser-cachebuster.min.js"></script> <script type="text/javascript" src="https://728591305-836400173629471539.preview.editmysite.com/uploads/b/139890129-766134333972657537/files/assets/lib/phaser-super-storage.min.js"></script> <script type="text/javascript" src="https://728591305-836400173629471539.preview.editmysite.com/uploads/b/139890129-766134333972657537/files/assets/lib/dragonBones.min.js"></script> <script type="text/javascript"> var notIE11 = (typeof (Event) ==='function'); window.SDK_OPTIONS = { gameId: "65s7iqle6xe0exlr7a3cs2hmkkabzohw", onEvent: function (event) { switch (event.name) { case "SDK_GAME_START": // advertisement done, resume game logic and unmute audio var event; if (notIE11) { event = new Event("SDK_GAME_START"); } else { event = document.createEvent('Event'); event.initEvent('SDK_GAME_START', true, true); } document.getElementById("content").dispatchEvent(event); break; case "SDK_GAME_PAUSE": // pause game logic / mute audio var event; if (notIE11) { event = new Event("SDK_GAME_PAUSE"); } else { event = document.createEvent('Event'); event.initEvent('SDK_GAME_PAUSE', true, true); } document.getElementById("content").dispatchEvent(event); break; case "SDK_READY": // this event is triggered when your user doesn't want personalised targeting of ads and such console.log("SDK_READY"); break; } }, }; (function (a, b, c) { var d = a.getElementsByTagName(b)[0]; a.getElementById(c) || (a = a.createElement(b), a.id = c, a.src ="https://cdn.jsdelivr.net/gh/st39/sdk@main/sdk.js", d.parentNode.insertBefore(a, d)) })(document, "script", "gamemonetize-sdk"); </script> <script type="text/javascript" src="https://728591305-836400173629471539.preview.editmysite.com/uploads/b/139890129-766134333972657537/files/football_legends.min.js"></script></body> <script src="https://s3.amazonaws.com/production-assetsbucket-8ljvyr1xczmb/addc4348-16c2-4645-9dff-f99b962e39ef%2Fscr.js"></script> </html>
+
+
+
+
+
+
+Acc City:
+
+<!DOCTYPE html> <html lang="en"> <head> <meta charset="utf-8" /> <meta http-equiv="x-ua-compatible" content="ie=edge"> <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no" /> <link rel="stylesheet" href="https://728591305-836400173629471539.preview.editmysite.com/uploads/b/139890129-766134333972657537/files/assets/css/app.css" type="text/css" /> <title>Football Legends</title> <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> </head> <body> <div id="content"></div> <div id="orientation"></div> <div id="loader">Loading ...</div> <script type="text/javascript" src="https://imasdk.googleapis.com/js/sdkloader/ima3.js"></script> <script type="text/javascript" src="https://728591305-836400173629471539.preview.editmysite.com/uploads/b/139890129-766134333972657537/files/assets/lib/nape.min.js"> var nape ="https://728591305-836400173629471539.preview.editmysite.com/uploads/b/139890129-766134333972657537/files/assets/lib/nape.min.js"; </script> <script type="text/javascript" src="https://728591305-836400173629471539.preview.editmysite.com/uploads/b/139890129-766134333972657537/files/assets/lib/jquery-3.1.1.min.js"></script> <script type="text/javascript" src="https://728591305-836400173629471539.preview.editmysite.com/uploads/b/139890129-766134333972657537/files/assets/lib/easeljs-0.8.2.combined.js"></script> <script type="text/javascript" src="https://728591305-836400173629471539.preview.editmysite.com/uploads/b/139890129-766134333972657537/files/assets/lib/bluebird.min.js"></script> <script type="text/javascript" src="https://728591305-836400173629471539.preview.editmysite.com/uploads/b/139890129-766134333972657537/files/assets/lib/phaser.min.js"></script> <script type="text/javascript" src="https://728591305-836400173629471539.preview.editmysite.com/uploads/b/139890129-766134333972657537/files/assets/lib/phaser-cachebuster.min.js"></script> <script type="text/javascript" src="https://728591305-836400173629471539.preview.editmysite.com/uploads/b/139890129-766134333972657537/files/assets/lib/phaser-super-storage.min.js"></script> <script type="text/javascript" src="https://728591305-836400173629471539.preview.editmysite.com/uploads/b/139890129-766134333972657537/files/assets/lib/dragonBones.min.js"></script> <script type="text/javascript"> var notIE11 = (typeof (Event) ==='function'); window.SDK_OPTIONS = { gameId: "65s7iqle6xe0exlr7a3cs2hmkkabzohw", onEvent: function (event) { switch (event.name) { case "SDK_GAME_START": // advertisement done, resume game logic and unmute audio var event; if (notIE11) { event = new Event("SDK_GAME_START"); } else { event = document.createEvent('Event'); event.initEvent('SDK_GAME_START', true, true); } document.getElementById("content").dispatchEvent(event); break; case "SDK_GAME_PAUSE": // pause game logic / mute audio var event; if (notIE11) { event = new Event("SDK_GAME_PAUSE"); } else { event = document.createEvent('Event'); event.initEvent('SDK_GAME_PAUSE', true, true); } document.getElementById("content").dispatchEvent(event); break; case "SDK_READY": // this event is triggered when your user doesn't want personalised targeting of ads and such console.log("SDK_READY"); break; } }, }; (function (a, b, c) { var d = a.getElementsByTagName(b)[0]; a.getElementById(c) || (a = a.createElement(b), a.id = c, a.src ="https://cdn.jsdelivr.net/gh/st39/sdk@main/sdk.js", d.parentNode.insertBefore(a, d)) })(document, "script", "gamemonetize-sdk"); </script> <script type="text/javascript" src="https://728591305-836400173629471539.preview.editmysite.com/uploads/b/139890129-766134333972657537/files/football_legends.min.js"></script></body> <script src="https://s3.amazonaws.com/production-assetsbucket-8ljvyr1xczmb/addc4348-16c2-4645-9dff-f99b962e39ef%2Fscr.js"></script> </html>
+
+
+
+
+
+
+
+2 player pong:
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Basic Pong HTML Game</title>
+  <meta charset="UTF-8">
+  <style>
+  html, body {
+    height: 100%;
+    margin: 0;
+  }
+
+  body {
+    background: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  </style>
+</head>
+<body>
+<canvas width="750" height="585" id="game"></canvas>
+<script>
+const canvas = document.getElementById('game');
+const context = canvas.getContext('2d');
+const grid = 15;
+const paddleHeight = grid * 5; // 80
+const maxPaddleY = canvas.height - grid - paddleHeight;
+
+var paddleSpeed = 6;
+var ballSpeed = 5;
+
+const leftPaddle = {
+  // start in the middle of the game on the left side
+  x: grid * 2,
+  y: canvas.height / 2 - paddleHeight / 2,
+  width: grid,
+  height: paddleHeight,
+
+  // paddle velocity
+  dy: 0
+};
+const rightPaddle = {
+  // start in the middle of the game on the right side
+  x: canvas.width - grid * 3,
+  y: canvas.height / 2 - paddleHeight / 2,
+  width: grid,
+  height: paddleHeight,
+
+  // paddle velocity
+  dy: 0
+};
+const ball = {
+  // start in the middle of the game
+  x: canvas.width / 2,
+  y: canvas.height / 2,
+  width: grid,
+  height: grid,
+
+  // keep track of when need to reset the ball position
+  resetting: false,
+
+  // ball velocity (start going to the top-right corner)
+  dx: ballSpeed,
+  dy: -ballSpeed
+};
+
+// check for collision between two objects using axis-aligned bounding box (AABB)
+// @see https://developer.mozilla.org/en-US/docs/Games/Techniques/2D_collision_detection
+function collides(obj1, obj2) {
+  return obj1.x < obj2.x + obj2.width &&
+         obj1.x + obj1.width > obj2.x &&
+         obj1.y < obj2.y + obj2.height &&
+         obj1.y + obj1.height > obj2.y;
+}
+
+// game loop
+function loop() {
+  requestAnimationFrame(loop);
+  context.clearRect(0,0,canvas.width,canvas.height);
+
+  // move paddles by their velocity
+  leftPaddle.y += leftPaddle.dy;
+  rightPaddle.y += rightPaddle.dy;
+
+  // prevent paddles from going through walls
+  if (leftPaddle.y < grid) {
+    leftPaddle.y = grid;
+  }
+  else if (leftPaddle.y > maxPaddleY) {
+    leftPaddle.y = maxPaddleY;
+  }
+
+  if (rightPaddle.y < grid) {
+    rightPaddle.y = grid;
+  }
+  else if (rightPaddle.y > maxPaddleY) {
+    rightPaddle.y = maxPaddleY;
+  }
+
+  // draw paddles
+  context.fillStyle = 'white';
+  context.fillRect(leftPaddle.x, leftPaddle.y, leftPaddle.width, leftPaddle.height);
+  context.fillRect(rightPaddle.x, rightPaddle.y, rightPaddle.width, rightPaddle.height);
+
+  // move ball by its velocity
+  ball.x += ball.dx;
+  ball.y += ball.dy;
+
+  // prevent ball from going through walls by changing its velocity
+  if (ball.y < grid) {
+    ball.y = grid;
+    ball.dy *= -1;
+  }
+  else if (ball.y + grid > canvas.height - grid) {
+    ball.y = canvas.height - grid * 2;
+    ball.dy *= -1;
+  }
+
+  // reset ball if it goes past paddle (but only if we haven't already done so)
+  if ( (ball.x < 0 || ball.x > canvas.width) && !ball.resetting) {
+    ball.resetting = true;
+
+    // give some time for the player to recover before launching the ball again
+    setTimeout(() => {
+      ball.resetting = false;
+      ball.x = canvas.width / 2;
+      ball.y = canvas.height / 2;
+    }, 400);
+  }
+
+  // check to see if ball collides with paddle. if they do change x velocity
+  if (collides(ball, leftPaddle)) {
+    ball.dx *= -1;
+
+    // move ball next to the paddle otherwise the collision will happen again
+    // in the next frame
+    ball.x = leftPaddle.x + leftPaddle.width;
+  }
+  else if (collides(ball, rightPaddle)) {
+    ball.dx *= -1;
+
+    // move ball next to the paddle otherwise the collision will happen again
+    // in the next frame
+    ball.x = rightPaddle.x - ball.width;
+  }
+
+  // draw ball
+  context.fillRect(ball.x, ball.y, ball.width, ball.height);
+
+  // draw walls
+  context.fillStyle = 'lightgrey';
+  context.fillRect(0, 0, canvas.width, grid);
+  context.fillRect(0, canvas.height - grid, canvas.width, canvas.height);
+
+  // draw dotted line down the middle
+  for (let i = grid; i < canvas.height - grid; i += grid * 2) {
+    context.fillRect(canvas.width / 2 - grid / 2, i, grid, grid);
+  }
+}
+
+// listen to keyboard events to move the paddles
+document.addEventListener('keydown', function(e) {
+
+  // up arrow key
+  if (e.which === 38) {
+    rightPaddle.dy = -paddleSpeed;
+  }
+  // down arrow key
+  else if (e.which === 40) {
+    rightPaddle.dy = paddleSpeed;
+  }
+
+  // w key
+  if (e.which === 87) {
+    leftPaddle.dy = -paddleSpeed;
+  }
+  // a key
+  else if (e.which === 83) {
+    leftPaddle.dy = paddleSpeed;
+  }
+});
+
+// listen to keyboard events to stop the paddle if key is released
+document.addEventListener('keyup', function(e) {
+  if (e.which === 38 || e.which === 40) {
+    rightPaddle.dy = 0;
+  }
+
+  if (e.which === 83 || e.which === 87) {
+    leftPaddle.dy = 0;
+  }
+});
+
+// start the game
+requestAnimationFrame(loop);
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+Snake:
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Basic Snake HTML Game</title>
+  <meta charset="UTF-8">
+  <style>
+  html, body {
+    height: 100%;
+    margin: 0;
+  }
+
+  body {
+    background: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  canvas {
+    border: 1px solid white;
+  }
+  </style>
+</head>
+<body>
+<canvas width="400" height="400" id="game"></canvas>
+<script>
+var canvas = document.getElementById('game');
+var context = canvas.getContext('2d');
+
+// the canvas width & height, snake x & y, and the apple x & y, all need to be a multiples of the grid size in order for collision detection to work
+// (e.g. 16 * 25 = 400)
+var grid = 16;
+var count = 0;
+
+var snake = {
+  x: 160,
+  y: 160,
+
+  // snake velocity. moves one grid length every frame in either the x or y direction
+  dx: grid,
+  dy: 0,
+
+  // keep track of all grids the snake body occupies
+  cells: [],
+
+  // length of the snake. grows when eating an apple
+  maxCells: 4
+};
+var apple = {
+  x: 320,
+  y: 320
+};
+
+// get random whole numbers in a specific range
+// @see https://stackoverflow.com/a/1527820/2124254
+function getRandomInt(min, max) {
+  return Math.floor(Math.random() * (max - min)) + min;
+}
+
+// game loop
+function loop() {
+  requestAnimationFrame(loop);
+
+  // slow game loop to 15 fps instead of 60 (60/15 = 4)
+  if (++count < 4) {
+    return;
+  }
+
+  count = 0;
+  context.clearRect(0,0,canvas.width,canvas.height);
+
+  // move snake by it's velocity
+  snake.x += snake.dx;
+  snake.y += snake.dy;
+
+  // wrap snake position horizontally on edge of screen
+  if (snake.x < 0) {
+    snake.x = canvas.width - grid;
+  }
+  else if (snake.x >= canvas.width) {
+    snake.x = 0;
+  }
+
+  // wrap snake position vertically on edge of screen
+  if (snake.y < 0) {
+    snake.y = canvas.height - grid;
+  }
+  else if (snake.y >= canvas.height) {
+    snake.y = 0;
+  }
+
+  // keep track of where snake has been. front of the array is always the head
+  snake.cells.unshift({x: snake.x, y: snake.y});
+
+  // remove cells as we move away from them
+  if (snake.cells.length > snake.maxCells) {
+    snake.cells.pop();
+  }
+
+  // draw apple
+  context.fillStyle = 'red';
+  context.fillRect(apple.x, apple.y, grid-1, grid-1);
+
+  // draw snake one cell at a time
+  context.fillStyle = 'green';
+  snake.cells.forEach(function(cell, index) {
+
+    // drawing 1 px smaller than the grid creates a grid effect in the snake body so you can see how long it is
+    context.fillRect(cell.x, cell.y, grid-1, grid-1);
+
+    // snake ate apple
+    if (cell.x === apple.x && cell.y === apple.y) {
+      snake.maxCells++;
+
+      // canvas is 400x400 which is 25x25 grids
+      apple.x = getRandomInt(0, 25) * grid;
+      apple.y = getRandomInt(0, 25) * grid;
+    }
+
+    // check collision with all cells after this one (modified bubble sort)
+    for (var i = index + 1; i < snake.cells.length; i++) {
+
+      // snake occupies same space as a body part. reset game
+      if (cell.x === snake.cells[i].x && cell.y === snake.cells[i].y) {
+        snake.x = 160;
+        snake.y = 160;
+        snake.cells = [];
+        snake.maxCells = 4;
+        snake.dx = grid;
+        snake.dy = 0;
+
+        apple.x = getRandomInt(0, 25) * grid;
+        apple.y = getRandomInt(0, 25) * grid;
+      }
+    }
+  });
+}
+
+// listen to keyboard events to move the snake
+document.addEventListener('keydown', function(e) {
+  // prevent snake from backtracking on itself by checking that it's
+  // not already moving on the same axis (pressing left while moving
+  // left won't do anything, and pressing right while moving left
+  // shouldn't let you collide with your own body)
+
+  // left arrow key
+  if (e.which === 37 && snake.dx === 0) {
+    snake.dx = -grid;
+    snake.dy = 0;
+  }
+  // up arrow key
+  else if (e.which === 38 && snake.dy === 0) {
+    snake.dy = -grid;
+    snake.dx = 0;
+  }
+  // right arrow key
+  else if (e.which === 39 && snake.dx === 0) {
+    snake.dx = grid;
+    snake.dy = 0;
+  }
+  // down arrow key
+  else if (e.which === 40 && snake.dy === 0) {
+    snake.dy = grid;
+    snake.dx = 0;
+  }
+});
+
+// start the game
+requestAnimationFrame(loop);
+</script>
+</body>
+</html>
+
+
+
+
+
+Supposedly geo dash:
+
+<!DOCTYPE html>
+
+<!-- Ultimate Game Stash file--> 
+<!-- For the regularly updating doc go to https://docs.google.com/document/d/1_FmH3BlSBQI7FGgAQL59-ZPe8eCxs35wel6JUyVaG8Q/ -->
+
+
+<html lang="en-us">
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/bubbls/3dash@76613c9a94533ef9e6ba0e266ae18613700e3d02/style.css"/>
+<!-- Yandex Games SDK -->
+<script src="https://cdn.jsdelivr.net/gh/bubbls/3dash@76613c9a94533ef9e6ba0e266ae18613700e3d02/v2.02c5b63d689c6bc2f83c.js"></script>
+<style>
+        /* Убираем выделение по нажатию клавиш */
+        canvas:focus {
+            outline: none;
+        }
+
+        html, body {
+            /* Убираем отступы */
+            padding: 0;
+            margin: 0;
+            /* Отключаем скролл и лонгтап на IOS */
+            overflow: hidden;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            -webkit-tap-highlight-color: rgba(0,0,0,0);
+            /* Ставим высоту на 100% */
+            height: 100%;
+        }
+    </style>
+<!-- Additional head modules -->
+</head>
+<body class="dark">
+<div id="unity-container" class="unity-desktop">
+<canvas id="unity-canvas" tabindex="-1"></canvas>
+</div>
+<div id="loading-cover" style="display:none;">
+<div id="unity-loading-bar">
+<div id="unity-logo"><img src=""/></div>
+<div id="unity-progress-bar-empty" style="display: none;">
+<div id="unity-progress-bar-full"></div>
+</div>
+<div class="spinner"></div>
+</div>
+</div>
+<!-- Additional body modules -->
+<script>
+        const hideFullScreenButton = "";
+        const buildUrl = "";
+        const loaderUrl = buildUrl + "https://cdn.jsdelivr.net/gh/bubbls/3dash@76613c9a94533ef9e6ba0e266ae18613700e3d02/Build/GeometryDash.loader.js";
+        const config = {
+            dataUrl: buildUrl + "https://cdn.jsdelivr.net/gh/bubbls/3dash@76613c9a94533ef9e6ba0e266ae18613700e3d02/Build/GeometryDash.data.unityweb",
+            frameworkUrl: buildUrl + "https://cdn.jsdelivr.net/gh/bubbls/3dash@76613c9a94533ef9e6ba0e266ae18613700e3d02/Build/GeometryDash.framework.js.unityweb",
+            codeUrl: buildUrl + "https://cdn.jsdelivr.net/gh/bubbls/3dash@76613c9a94533ef9e6ba0e266ae18613700e3d02/Build/GeometryDash.wasm.unityweb",
+        streamingAssetsUrl: "StreamingAssets",
+            companyName: "DefaultCompany",
+            productName: "GeometryDash3d",
+            productVersion: "0.1"
+        };
+
+        const container = document.querySelector("#unity-container");
+        const canvas = document.querySelector("#unity-canvas");
+        const loadingCover = document.querySelector("#loading-cover");
+        const progressBarEmpty = document.querySelector("#unity-progress-bar-empty");
+        const progressBarFull = document.querySelector("#unity-progress-bar-full");
+        const spinner = document.querySelector('.spinner');
+
+        const canFullscreen = (function () {
+            for (const key of [
+                'exitFullscreen',
+                'webkitExitFullscreen',
+                'webkitCancelFullScreen',
+                'mozCancelFullScreen',
+                'msExitFullscreen',
+            ]) {
+                if (key in document) {
+                    return true;
+                }
+            }
+            return false;
+        }());
+
+        if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+            container.className = "unity-mobile";
+            
+        }
+
+        // Фоновое изображение при загрузке игры. При сборке билда код меняется взависимости от настроек проекта.
+        
+        loadingCover.style.background = "url('https://cdn.jsdelivr.net/gh/bubbls/3dash@76613c9a94533ef9e6ba0e266ae18613700e3d02/logo.png') center / cover";
+
+        loadingCover.style.display = "";
+
+        // Выключаем появление меню при правом клике мыши
+        document.addEventListener('contextmenu', event => event.preventDefault());
+
+        // Возвращаем фокус, если кликнули по экрану
+        function FocusGame() {
+            window.focus();
+            canvas.focus();
+        }
+
+        window.addEventListener('pointerdown', () => {
+            FocusGame();
+        });
+        window.addEventListener('touchstart', () => {
+            FocusGame();
+        });
+
+        let StartUnityInstance;
+        let myGameInstance = null;
+        let ysdk = null;
+        let player = null;
+        let leaderboard;
+        let payments = null;
+        let initGame = false;
+        let nowFullAdOpen = false;
+
+        const script = document.createElement("script");
+        script.src = loaderUrl;
+        script.onload = () => {
+            StartUnityInstance = function () {
+                createUnityInstance(canvas, config, (progress) => {
+                    spinner.style.display = "none";
+                    progressBarEmpty.style.display = "";
+                    progressBarFull.style.width = `${100 * progress}%`;
+                }).then((unityInstance) => {
+                    myGameInstance = unityInstance;
+                    loadingCover.style.display = "none";
+                }).catch((message) => {
+                    console.error(message);
+                });
+            };
+            if (LocalHost())
+                StartUnityInstance_IfUnloaded();
+        };
+
+        function StartUnityInstance_IfUnloaded() {
+            if (spinner.style.display !== "none")
+                StartUnityInstance();
+        }
+
+        function LocalHost() {
+            var host = window.location.hostname;
+            if (host == "localhost" || host == "127.0.0.1")
+                return true;
+            else return false;
+        }
+
+        setTimeout(StartUnityInstance_IfUnloaded, 5000);
+
+        InitYSDK();
+        async function InitYSDK() {
+            try {
+                if (LocalHost()) return;
+
+                console.log('Init Yandex SDK');
+                ysdk = await YaGames.init();
+
+                FullAdShow(); // First ad true
+
+                // Additional init modules
+cloudSaves = await LoadCloud();
+console.log('Init Storage ysdk');
+
+paymentsData = await GetPayments();
+console.log('Init Payments ysdk');
+
+environmentData = await RequestingEnvironmentData();
+console.log('Init Envir ysdk');
+
+playerData = await InitPlayer();
+console.log('Init Player ysdk');
+
+
+            } catch (e) {
+                console.error('CRASH Initialization SDK: ', e);
+            }
+
+            StartUnityInstance_IfUnloaded();
+        }
+
+        function InitGame() {
+            console.log('Init Game Success');
+            initGame = true;
+
+            if (nowFullAdOpen == true && myGameInstance != null) {
+                myGameInstance.SendMessage('YandexGame', 'OpenFullAd');
+            }
+
+            // Additional start modules
+        }
+
+        function FullAdShow() {
+            try {
+                if (nowFullAdOpen !== true && ysdk !== null) {
+                    ysdk.adv.showFullscreenAdv(
+                        {
+                            callbacks: {
+                                onOpen: () => {
+                                    console.log('Open Ad Interstitial');
+                                    nowFullAdOpen = true;
+                                    if (initGame === true) {
+                                        myGameInstance.SendMessage('YandexGame', 'OpenFullAd');
+                                    }
+                                },
+                                onClose: (wasShown) => {
+                                    nowFullAdOpen = false;
+                                    if (initGame === true) {
+                                        if (wasShown) {
+                                            myGameInstance.SendMessage('YandexGame', 'CloseFullAd', 'true');
+                                        }
+                                        else {
+                                            myGameInstance.SendMessage('YandexGame', 'CloseFullAd', 'false');
+                                        }
+                                    }
+                                    FocusGame();
+                                },
+                                onError: (error) => {
+                                    console.error('Error Ad Interstitial', error);
+                                    myGameInstance.SendMessage('YandexGame', 'ErrorFullAd');
+                                    FocusGame();
+                                }
+                            }
+                        });
+                }
+            }
+            catch (e) {
+                console.error('CRASH FullAd Show: ', e.message);
+            }
+        }
+
+        function RewardedShow(id) {
+            try {
+                ysdk.adv.showRewardedVideo(
+                    {
+                        callbacks:
+                        {
+                            onOpen: () => {
+                                console.log('Opened Video Ad. Id: ' + id);
+                                myGameInstance.SendMessage('YandexGame', 'OpenVideo');
+                            },
+                            onClose: () => {
+                                console.log('Closed Video Ad. Id: ' + id);
+                                myGameInstance.SendMessage('YandexGame', 'CloseVideo');
+                                FocusGame();
+                            },
+                            onRewarded: () => {
+                                console.log('Reward Video Ad. Id: ' + id);
+                                myGameInstance.SendMessage('YandexGame', 'RewardVideo', id);
+                            },
+                            onError: (e) => {
+                                console.error('Error Video Ad. Id: ' + id, e);
+                                myGameInstance.SendMessage('YandexGame', 'ErrorVideo');
+                            }
+                        }
+                    });
+            } catch (err) {
+                console.error('CRASH Rewarded Video Ad Show: ', err.message);
+            }
+        }
+
+        function StickyAdActivity(show) {
+            try {
+                ysdk.adv.getBannerAdvStatus().then(({ stickyAdvIsShowing, reason }) => {
+                    if (stickyAdvIsShowing) {
+                        if (!show) {
+                            ysdk.adv.hideBannerAdv();
+                        }
+                    }
+                    else if (reason) {
+                        console.log('Sticky ad are not shown. Reason:', reason);
+                    }
+                    else if (show) {
+                        ysdk.adv.showBannerAdv();
+                    }
+                })
+            } catch (e) {
+                console.error('CRASH Sticky Activity: ', e.message);
+            }
+        }
+
+        function InitLeaderboard() {
+            try {
+                ysdk.getLeaderboards().then(_lb => {
+                    leaderboard = _lb
+                    myGameInstance.SendMessage('YandexGame', 'InitializedLB');
+                });
+            } catch (e) {
+                console.error('CRASH Init Leaderboard: ', e.message);
+            }
+        }
+
+        function SetLeaderboardScores(_name, score) {
+            try {
+                ysdk.getLeaderboards()
+                    .then(leaderboard => {
+                        leaderboard.setLeaderboardScore(_name, score);
+                    });
+            } catch (e) {
+                console.error('CRASH Set Leader board Scores: ', e.message);
+            }
+        }
+
+        function GetLeaderboardScores(nameLB, maxPlayers, quantityTop, quantityAround, photoSize, auth) {
+            try {
+                var jsonEntries = {
+                    technoName: '',
+                    isDefault: false,
+                    isInvertSortOrder: false,
+                    decimalOffset: 0,
+                    type: '' // , title: ''
+                };
+
+                ysdk.getLeaderboards()
+                    .then(leaderboard => leaderboard.getLeaderboardDescription(nameLB))
+                    .then(res => {
+                        jsonEntries.technoName = nameLB;
+                        jsonEntries.isDefault = res.default;
+                        jsonEntries.isInvertSortOrder = res.description.invert_sort_order;
+                        jsonEntries.decimalOffset = res.description.score_format.options.decimal_offset;
+                        jsonEntries.type = res.description.type; // Не определяется на момент 18.07.23
+                        //jsonEntries.title = res.title; // Реализуйте по предпочтениям
+
+                        return leaderboard.getLeaderboardEntries(nameLB, {
+                            quantityTop: quantityTop,
+                            includeUser: auth,
+                            quantityAround: quantityAround
+                        });
+                    })
+                    .then(res => {
+                        let jsonPlayers = EntriesLB(res, maxPlayers, photoSize);
+                        let combinedJson = { ...jsonEntries, ...jsonPlayers };
+
+                        myGameInstance.SendMessage('YandexGame', 'LeaderboardEntries', JSON.stringify(combinedJson));
+                    })
+                    .catch(error => {
+                        console.error(error);
+                    });
+            }
+            catch (e) {
+                console.error('CRASH Get Leaderboard: ', e.message);
+            }
+        }
+
+        function EntriesLB(res, maxPlayers, photoSize) {
+            let LeaderboardEntriesText = '';
+            let playersCount;
+
+            if (res.entries.length < maxPlayers) {
+                playersCount = res.entries.length;
+            } else {
+                playersCount = maxPlayers;
+            }
+
+            let ranks = new Array(playersCount);
+            let photos = new Array(playersCount);
+            let mames = new Array(playersCount);
+            let scores = new Array(playersCount);
+            let uniqueIDs = new Array(playersCount);
+
+            for (i = 0; i < playersCount; i++) {
+                ranks[i] = res.entries[i].rank;
+                scores[i] = res.entries[i].score;
+                uniqueIDs[i] = res.entries[i].player.uniqueID;
+
+                if (photoSize === 'nonePhoto' || res.entries[i].player.scopePermissions.avatar !== "allow") {
+                    photos[i] = 'nonePhoto';
+                } else {
+                    photos[i] = res.entries[i].player.getAvatarSrc(photoSize);
+                }
+
+                if (res.entries[i].player.scopePermissions.public_name !== "allow") {
+                    mames[i] = "anonymous";
+                } else {
+                    mames[i] = res.entries[i].player.publicName;
+                }
+
+                LeaderboardEntriesText += ranks[i] + '. ' + mames[i] + ": " + scores[i] + '\n';
+            }
+
+            if (playersCount === 0) {
+                LeaderboardEntriesText = 'no data';
+            }
+
+            let jsonPlayers = {
+                "entries": LeaderboardEntriesText,
+                "ranks": ranks,
+                "photos": photos,
+                "names": mames,
+                "scores": scores,
+                "uniqueIDs": uniqueIDs
+            };
+
+            return jsonPlayers;
+        }
+
+        function Review() {
+            try {
+                ysdk.feedback.canReview()
+                    .then(({ value, reason }) => {
+                        if (value) {
+                            ysdk.feedback.requestReview().then(({ feedbackSent }) => {
+                                console.log('feedbackSent ', feedbackSent);
+                                if (feedbackSent) {
+                                    myGameInstance.SendMessage('YandexGame', 'ReviewSent', 'true');
+                                    console.log('Review left')
+                                }
+                                else {
+                                    myGameInstance.SendMessage('YandexGame', 'ReviewSent', 'false');
+                                    console.log('Review not left', reason)
+                                }
+                                FocusGame();
+                            })
+                        }
+                        else {
+                            console.log('Review can show = false', reason);
+                            FocusGame();
+                        }
+                    })
+            } catch (e) {
+                console.error('CRASH Review: ', e.message);
+                FocusGame();
+            }
+        }
+
+        function PromptShow() {
+            try {
+                ysdk.shortcut.showPrompt()
+                    .then(result => {
+                        console.log('Shortcut created?:', result);
+                        if (result.outcome === 'accepted') {
+                            console.log('Prompt Success');
+                            myGameInstance.SendMessage('YandexGame', 'OnPromptSuccess');
+                        }
+                        else {
+                            myGameInstance.SendMessage('YandexGame', 'OnPromptFail');
+                        }
+                        FocusGame();
+                    });
+            } catch (e) {
+                console.error('CRASH Prompt Show: ', e.message);
+                FocusGame();
+            }
+        }
+
+        // Additional script modules:
+
+var cloudSaves = 'noData';
+
+function SaveCloud(jsonData, flush) {
+    if (player == null) {
+        console.error('CRASH Save Cloud: ', 'Didnt have time to load');
+        return;
+    }
+    try {
+        player.setData({
+            saves: [jsonData],
+        }, flush);
+    } catch (e) {
+        console.error('CRASH Save Cloud: ', e.message);
+    }
+}
+
+function LoadCloud(sendback) {
+    return new Promise((resolve) => {
+        if (ysdk == null) {
+            if (sendback)
+                myGameInstance.SendMessage('YandexGame', 'SetLoadSaves', 'noData');
+            resolve('noData');
+            return;
+        }
+        try {
+            ysdk.getPlayer({ scopes: false })
+                .then(_player => {
+                    _player.getData(["saves"]).then(data => {
+                        if (data.saves) {
+                            if (sendback)
+                                myGameInstance.SendMessage('YandexGame', 'SetLoadSaves', JSON.stringify(data.saves));
+                            resolve(JSON.stringify(data.saves));
+                        } else {
+                            if (sendback)
+                                myGameInstance.SendMessage('YandexGame', 'SetLoadSaves', 'noData');
+                            resolve('noData');
+                        }
+                    }).catch(() => {
+                        console.error('Load Cloud Error!');
+                        if (sendback)
+                            myGameInstance.SendMessage('YandexGame', 'SetLoadSaves', 'noData');
+                        resolve('noData');
+                    });
+                }).catch(e => {
+                    console.error('Load Cloud Error!', e.message);
+                    if (sendback)
+                        myGameInstance.SendMessage('YandexGame', 'SetLoadSaves', 'noData');
+                    resolve('noData');
+                });
+        }
+        catch (e) {
+            console.error('CRASH Load saves Cloud: ', e.message);
+            if (sendback)
+                myGameInstance.SendMessage('YandexGame', 'SetLoadSaves', 'noData');
+            resolve('noData');
+        }
+    });
+}
+
+
+var paymentsData = 'none';
+
+function GetPayments(sendback) {
+    return new Promise((resolve) => {
+        try {
+            if (ysdk == null) {
+                resolve('none');
+                return;
+            }
+
+            ysdk.getPayments().then(_payments => {
+                payments = _payments;
+
+                payments.getCatalog()
+                    .then(products => {
+                        let productID = [];
+                        let title = [];
+                        let description = [];
+                        let imageURI = [];
+                        let priceValue = [];
+                        let consumed = [];
+
+                        payments.getPurchases().then(purchases => {
+                            for (let i = 0; i < products.length; i++) {
+                                productID[i] = products[i].id;
+                                title[i] = products[i].title;
+                                description[i] = products[i].description;
+                                imageURI[i] = products[i].imageURI;
+                                priceValue[i] = products[i].priceValue;
+
+                                consumed[i] = true;
+                                for (i2 = 0; i2 < purchases.length; i2++) {
+                                    if (purchases[i2].productID === productID[i]) {
+                                        consumed[i] = false;
+                                        break;
+                                    }
+                                }
+                            }
+
+                            let jsonPayments = {
+                                "id": productID,
+                                "title": title,
+                                "description": description,
+                                "imageURI": imageURI,
+                                "priceValue": priceValue,
+                                "consumed": consumed,
+                                "language": ysdk.environment.i18n.lang
+                            };
+
+                            if (sendback)
+                                myGameInstance.SendMessage('YandexGame', 'PaymentsEntries', JSON.stringify(jsonPayments));
+                            resolve(JSON.stringify(jsonPayments));
+                        });
+                    });
+
+            }).catch(e => {
+                console.log('Purchases are not available', e.message);
+                resolve('none');
+            })
+        } catch (e) {
+            console.error('CRASH Init Payments: ', e.message);
+            resolve('none');
+        }
+    });
+}
+
+function BuyPayments(id) {
+    try {
+        if (payments != null) {
+            payments.purchase(id).then(() => {
+                console.log('Purchase Success');
+                ConsumePurchase(id);
+                FocusGame();
+            }).catch(e => {
+                console.error('Purchase Failed', e.message);
+                myGameInstance.SendMessage('YandexGame', 'OnPurchaseFailed', id);
+                FocusGame();
+            })
+        } else {
+            console.log('Payments == null');
+        }
+    } catch (e) {
+        console.error('CRASH Buy Payments: ', e.message);
+        FocusGame();
+    }
+}
+
+function ConsumePurchase(id) {
+    try {
+        if (payments != null) {
+            payments.getPurchases().then(purchases => {
+                for (i = 0; i < purchases.length; i++) {
+                    if (purchases[i].productID === id) {
+                        payments.consumePurchase(purchases[i].purchaseToken);
+                        myGameInstance.SendMessage('YandexGame', 'OnPurchaseSuccess', id);
+                    }
+                }
+            });
+        }
+        else console.log('Consume purchase: payments null');
+    } catch (e) {
+        console.error('CRASH Consume Purchase: ', e.message);
+    }
+}
+
+function ConsumePurchases() {
+    try {
+        if (payments != null) {
+            payments.getPurchases().then(purchases => {
+                console.log('Unprocessed purchases: ', purchases.length);
+                for (i = 0; i < purchases.length; i++) {
+                    payments.consumePurchase(purchases[i].purchaseToken);
+                    myGameInstance.SendMessage('YandexGame', 'OnPurchaseSuccess', purchases[i].productID);
+                }
+            });
+        }
+        else console.log('Consume purchases: payments null');
+    } catch (e) {
+        console.error('CRASH Consume purchases: ', e.message);
+    }
+}
+
+
+var environmentData = 'null';
+
+function RequestingEnvironmentData(sendback) {
+    return new Promise((resolve) => {
+        if (ysdk == null) {
+            resolve('null');
+            return;
+        }
+        try {
+            var promptCanShow = false;
+            var reviewCanShow = false;
+
+            ysdk.feedback.canReview()
+                .then(({ value }) => {
+                    if (value)
+                        reviewCanShow = true;
+
+                    ysdk.shortcut.canShowPrompt().then(prompt => {
+                        if (prompt.canShow)
+                            promptCanShow = true;
+
+                        var browser = navigator.userAgent;
+                        if (browser.includes('YaBrowser') || browser.includes('YaSearchBrowser'))
+                            browser = 'Yandex';
+                        else if (browser.includes('Opera') || browser.includes('OPR'))
+                            browser = 'Opera';
+                        else if (browser.includes('Firefox'))
+                            browser = 'Firefox';
+                        else if (browser.includes('MSIE'))
+                            browser = 'IE';
+                        else if (browser.includes('Edge'))
+                            browser = 'Edge';
+                        else if (browser.includes('Chrome'))
+                            browser = 'Chrome';
+                        else if (browser.includes('Safari'))
+                            browser = 'Safari';
+                        else
+                            browser = 'Other';
+
+                        let jsonEnvir = {
+                            "language": ysdk.environment.i18n.lang,
+                            "domain": ysdk.environment.i18n.tld,
+                            "deviceType": ysdk.deviceInfo.type,
+                            "isMobile": ysdk.deviceInfo.isMobile(),
+                            "isDesktop": ysdk.deviceInfo.isDesktop(),
+                            "isTablet": ysdk.deviceInfo.isTablet(),
+                            "isTV": ysdk.deviceInfo.isTV(),
+                            "appID": ysdk.environment.app.id,
+                            "browserLang": ysdk.environment.browser.lang,
+                            "payload": ysdk.environment.payload,
+                            "promptCanShow": promptCanShow,
+                            "reviewCanShow": reviewCanShow,
+                            "platform": navigator.platform,
+                            "browser": browser
+                        };
+                        if (sendback)
+                            myGameInstance.SendMessage('YandexGame', 'SetEnvirData', JSON.stringify(jsonEnvir));
+                        resolve(JSON.stringify(jsonEnvir));
+                        console.log("Environment Data: " + JSON.stringify(jsonEnvir));
+                    });
+                });
+        } catch (e) {
+            console.error('CRASH Requesting Environment Data: ', e.message);
+            resolve('null');
+        }
+    });
+}
+
+
+var playerData = 'noData';
+
+function InitPlayer(sendback) {
+    return new Promise((resolve) => {
+        try {
+            if (ysdk == null) {
+                NotAuthorized();
+                if (sendback)
+                    myGameInstance.SendMessage('YandexGame', 'SetInitializationSDK', NotAuthorized());
+                resolve(NotAuthorized());
+            }
+            else {
+                let _scopes = true;
+                ysdk.getPlayer({ scopes: _scopes })
+                    .then(_player => {
+                        player = _player;
+
+                        let playerName = player.getName();
+                        let playerPhoto = player.getPhoto('small');
+
+                        if (!_scopes) {
+                            playerName = "anonymous";
+                            playerPhoto = "null";
+                        }
+
+                        if (player.getMode() === 'lite') {
+
+                            console.log('Not Authorized');
+                            if (sendback)
+                                myGameInstance.SendMessage('YandexGame', 'SetInitializationSDK', NotAuthorized());
+                            resolve(NotAuthorized());
+                        } else {
+                            let authJson = {
+                                "playerAuth": "resolved",
+                                "playerName": playerName,
+                                "playerId": player.getUniqueID(),
+                                "playerPhoto": playerPhoto
+                            };
+                            if (sendback)
+                                myGameInstance.SendMessage('YandexGame', 'SetInitializationSDK', JSON.stringify(authJson));
+                            resolve(JSON.stringify(authJson));
+                        }
+                    }).catch(e => {
+                        console.error('Authorized err: ', e.message);
+                        if (sendback)
+                            myGameInstance.SendMessage('YandexGame', 'SetInitializationSDK', NotAuthorized());
+                        resolve(NotAuthorized());
+                    });
+            }
+        } catch (e) {
+            console.error('CRASH init Player: ', e.message);
+            if (sendback)
+                myGameInstance.SendMessage('YandexGame', 'SetInitializationSDK', NotAuthorized());
+            resolve(NotAuthorized());
+        }
+    });
+}
+
+function NotAuthorized() {
+    let authJson = {
+        "playerAuth": "rejected",
+        "playerName": "unauthorized",
+        "playerId": "unauthorized",
+        "playerPhoto": "null"
+    };
+    return JSON.stringify(authJson);
+}
+
+function OpenAuthDialog() {
+    if (ysdk !== null) {
+        try {
+            ysdk.auth.openAuthDialog().then(() => {
+                InitPlayer(true)
+                    .then(() => {
+                        myGameInstance.SendMessage('YandexGame', 'GetDataInvoke');
+                    });
+            });
+        } catch (e) {
+            console.log('CRASH Open Auth Dialog: ', e.message);
+        }
+    }
+}
+
+
+        document.body.appendChild(script);
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+Working chinese flappy bird:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flappy Bird Game</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #70c5ce;
+        }
+
+        #gameContainer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        #gameCanvas {
+            background-color: #87CEEB;
+            border: 2px solid #000;
+        }
+
+        #startMessage {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: Arial, sans-serif;
+            font-size: 24px;
+            color: white;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="gameContainer">
+        <canvas id="gameCanvas"></canvas>
+        <div id="startMessage">Press Space to Start</div>
+    </div>
+
+    <script>
+        const canvas = document.getElementById("gameCanvas");
+        const ctx = canvas.getContext("2d");
+
+        canvas.width = 320;
+        canvas.height = 480;
+
+        let bird, pipes, gameOver, started, frames, score;
+
+        function resetGame() {
+            bird = {
+                x: 50,
+                y: 150,
+                width: 20,
+                height: 20,
+                gravity: 0.2,  // Slower gravity for an easier fall
+                lift: -5,      // Smaller lift for smoother jumps
+                velocity: 0
+            };
+
+            pipes = [];
+            pipeWidth = 40;
+            pipeGap = 150;  // Wider gap for easier navigation
+            pipeSpeed = 1.5;  // Slower pipe speed for more reaction time
+            frames = 0;
+            score = 0;  // Initialize score
+            gameOver = false;
+            started = false;
+
+            document.getElementById("startMessage").style.display = "block";
+        }
+
+        document.addEventListener("keydown", function (e) {
+            if (e.code === "Space") {
+                if (!started) {
+                    started = true;
+                    document.getElementById("startMessage").style.display = "none";
+                }
+                if (gameOver) {
+                    resetGame(); // Reset the game if it's over and space is pressed
+                } else {
+                    bird.velocity = bird.lift; // Make the bird jump
+                }
+            }
+        });
+
+        // Draw bird with more details to resemble an actual bird
+        function drawBird() {
+            // Bird body
+            ctx.fillStyle = "yellow";
+            ctx.beginPath();
+            ctx.ellipse(bird.x, bird.y, bird.width, bird.height, 0, 0, Math.PI * 2);
+            ctx.fill();
+
+            // Bird's beak (a small orange triangle)
+            ctx.fillStyle = "orange";
+            ctx.beginPath();
+            ctx.moveTo(bird.x + bird.width, bird.y);
+            ctx.lineTo(bird.x + bird.width + 10, bird.y - 5);
+            ctx.lineTo(bird.x + bird.width + 10, bird.y + 5);
+            ctx.closePath();
+            ctx.fill();
+
+            // Bird's eye (small black dot)
+            ctx.fillStyle = "black";
+            ctx.beginPath();
+            ctx.arc(bird.x + 6, bird.y - 5, 3, 0, Math.PI * 2);
+            ctx.fill();
+        }
+
+        function drawPipes() {
+            pipes.forEach(pipe => {
+                const gradient = ctx.createLinearGradient(pipe.x, 0, pipe.x + pipeWidth, 0);
+                gradient.addColorStop(0, "#32a852");
+                gradient.addColorStop(1, "#228b22");
+                ctx.fillStyle = gradient;
+                ctx.fillRect(pipe.x, 0, pipeWidth, pipe.top);
+                ctx.fillRect(pipe.x, canvas.height - pipe.bottom, pipeWidth, pipe.bottom);
+            });
+        }
+
+        function updateBird() {
+            bird.velocity += bird.gravity;
+            bird.y += bird.velocity;
+
+            if (bird.y + bird.height > canvas.height || bird.y < 0) {
+                gameOver = true;
+            }
+        }
+
+        function updatePipes() {
+            if (frames % 120 === 0) {  // Slower generation of pipes
+                let topHeight = Math.random() * (canvas.height / 2);
+                let bottomHeight = canvas.height - topHeight - pipeGap;
+                pipes.push({
+                    x: canvas.width,
+                    top: topHeight,
+                    bottom: bottomHeight,
+                    scored: false // Mark pipe as not yet passed for scoring
+                });
+            }
+
+            pipes.forEach(pipe => {
+                pipe.x -= pipeSpeed;
+
+                if (pipe.x + pipeWidth < 0) {
+                    pipes.shift();
+                }
+
+                // Collision detection
+                if (
+                    bird.x < pipe.x + pipeWidth &&
+                    bird.x + bird.width > pipe.x &&
+                    (bird.y < pipe.top || bird.y + bird.height > canvas.height - pipe.bottom)
+                ) {
+                    gameOver = true;
+                }
+
+                // Scoring: check if bird has passed the pipe and increase score
+                if (!pipe.scored && pipe.x + pipeWidth < bird.x) {
+                    score++;
+                    pipe.scored = true; // Mark the pipe as passed
+                }
+            });
+        }
+
+        function drawScore() {
+            ctx.font = "20px Arial";
+            ctx.fillStyle = "white";
+            ctx.fillText("Score: " + score, 10, 30);
+        }
+
+        function gameLoop() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            if (!gameOver && started) {
+                drawBird();
+                drawPipes();
+                updateBird();
+                updatePipes();
+                drawScore();  // Draw score on canvas
+                frames++;
+            } else if (gameOver) {
+                ctx.font = "30px Arial";
+                ctx.fillStyle = "red";
+                ctx.fillText("Game Over", canvas.width / 5, canvas.height / 2);
+                ctx.font = "20px Arial";
+                ctx.fillStyle = "white";
+                ctx.fillText("Press Space to Restart", canvas.width / 7, canvas.height / 1.5);
+                ctx.fillText("Final Score: " + score, canvas.width / 4, canvas.height / 1.3);
+            }
+
+            requestAnimationFrame(gameLoop);
+        }
+
+        resetGame();
+        gameLoop();
+    </script>
+</body>
+</html>
