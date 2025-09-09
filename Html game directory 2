@@ -1,0 +1,147 @@
+Level devil:
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Level Devil</title>
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" id="viewport"
+		name="viewport">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<style>
+		html,
+		body {
+			margin: 0;
+			padding: 0;
+			height: 100%;
+			overflow: hidden;
+		}
+
+		#openfl-content {
+			background: #000000;
+			width: 100%;
+			height: 100%;
+		}
+
+		#progress {
+			position: relative;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 50%;
+		}
+
+		#fullscreen-button {
+			position: absolute;
+			top: 10px;
+			right: 10px;
+			z-index: 1000;
+		}
+	</style>
+</head>
+
+<body dir="ltr">
+	<div id="openfl-content"></div>
+	<button id="fullscreen-button">Go Fullscreen</button>
+
+	<!-- Include necessary scripts -->
+	<script src="https://cdn.jsdelivr.net/gh/bubbls/ruffle@7af74029cd32181abb1f65a920331fd64de42262/ldmin.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/bubbls/ruffle@7af74029cd32181abb1f65a920331fd64de42262/ld.js"></script>
+	<!-- Add the script that defines 'lime' here -->
+	<script src="path/to/lime.js"></script> <!-- Replace with the actual path to the lime.js script -->
+
+	<script>
+		// Fullscreen button functionality
+        document.getElementById('fullscreen-button').addEventListener('click', function() {
+            var elem = document.getElementById('openfl-content');
+            if (elem.requestFullscreen) {
+                elem.requestFullscreen();
+            } else if (elem.mozRequestFullScreen) { // Firefox
+                elem.mozRequestFullScreen();
+            } else if (elem.webkitRequestFullscreen) { // Chrome, Safari and Opera
+                elem.webkitRequestFullscreen();
+            } else if (elem.msRequestFullscreen) { // IE/Edge
+                elem.msRequestFullscreen();
+            }
+        });
+
+        // Ensure 'lime' is defined before calling 'lime.embed'
+        if (typeof lime !== 'undefined') {
+            lime.embed("Level Devil", "openfl-content", 854, 480, { parameters: {} });
+        } else {
+            console.error("Lime is not defined. Please include the lime.js script.");
+        }
+	</script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+Stickman hook:
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<script src="https://cdn.jsdelivr.net/npm/p5@1.11.5/lib/p5.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/p5@1.11.5/lib/addons/p5.sound.min.js"></script>
+	<script src="mySketch.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+<head>
+    <base href="https://cdn.jsdelivr.net/gh/genizy/google-class@cd06df26d3c4d9f73c8151fc13f7b2dc27f3adda/stickman-hook/">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+    <style>
+      html,
+      body {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      margin: 0;
+      padding: 0;
+      border: 0;
+      overflow: hidden;
+      width: 100vw;
+      height: 100vh;
+      }
+      canvas {
+      width: 100%;
+      }
+    </style>
+    <script src="poki3.js"></script>
+  </head>
+  <body>
+    <script src="bundle.js"></script>
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"91be7a7b6dbe0904","version":"2025.1.0","r":1,"token":"0e8becf3a433401faa232e8c05dfd1f4","serverTiming":{"name":{"cfExtPri":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}}}' crossorigin="anonymous"></script>
+  </body>
+</html>
+
+
+
+
+
+
+
+Stickman ragdoll:
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<!-- keep the line below for OpenProcessing compatibility -->
+	<script src="https://openprocessing.org/openprocessing_sketch.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/p5@1.11.3/lib/p5.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/p5@1.11.3/lib/addons/p5.sound.min.js"></script>
+	<script src="mySketch.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/paigerodeghero/academicwebsite@897c910c65e6c68b04c44a6b6eba0b99d0f2f2cf/TemplateData/style.css"> <script src="https://cdn.jsdelivr.net/gh/paigerodeghero/academicwebsite@897c910c65e6c68b04c44a6b6eba0b99d0f2f2cf/TemplateData/UnityProgress.js"></script> <script src="https://cdn.jsdelivr.net/gh/gertdoro/Kubeflow@cae221a7618ee671ab5f8aa8403f0e9921e4d1ab/releasing/Ragdoll-io.js"></script> <script> var gameInstance = UnityLoader.instantiate("gameContainer", "https://cdn.jsdelivr.net/gh/gertdoro/Kubeflow@cae221a7618ee671ab5f8aa8403f0e9921e4d1ab/releasing/Ragdoll-io.json", {onProgress: UnityProgress,Module:{onRuntimeInitialized: function() {UnityProgress(gameInstance, "complete")}}}); </script> <script src=""></script> <div class="webgl-content"> <div id="gameContainer" style="width: 100vw; height: 100vh"></div> </div>
